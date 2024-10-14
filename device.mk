@@ -36,6 +36,9 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # Inherit from release keys
 $(call inherit-product-if-exists, vendor/extra/product.mk)
 
+# Inherit from ViPER4AndroidFX
+$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
