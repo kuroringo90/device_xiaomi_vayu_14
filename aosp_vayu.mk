@@ -11,19 +11,22 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit device configurations
 $(call inherit-product, device/xiaomi/vayu/device.mk)
 
-# Inherit common Aosp configurations
+# Inherit some common The Pixel Project stuff.
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+
+# Boot animation
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_USES_AOSP_RECOVERY := true
 TARGET_DISABLE_EPPE := true
-
-# SkylineUI Maintainer Flags
-SKYLINEUI_MAINTAINER := GXC2356
-CUSTOM_BUILD_TYPE := OFFICIAL
-
-# Boot Animation
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
+
+# The Pixel Project flags
+TARGET_FACE_UNLOCK_SUPPORTED := true
+USE_PIXEL_CHARGER := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := false
+TARGET_SUPPORTS_QUICK_TAP  := true
+TARGET_SUPPORTS_NOW_PLAYING := true
 
 PRODUCT_NAME := aosp_vayu
 PRODUCT_DEVICE := vayu
