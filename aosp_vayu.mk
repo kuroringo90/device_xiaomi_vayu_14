@@ -11,10 +11,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit device configurations
 $(call inherit-product, device/xiaomi/vayu/device.mk)
 
-# Inherit common DerpFest configurations
-$(call inherit-product, vendor/derp/config/common_full_phone.mk)
+# Inherit some common The Pixel Project stuff.
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
-PRODUCT_NAME := derp_vayu
+PRODUCT_NAME := aosp_vayu
 PRODUCT_DEVICE := vayu
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := Poco X3 Pro
@@ -23,11 +23,12 @@ PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_SYSTEM_NAME := vayu
 PRODUCT_SYSTEM_DEVICE := vayu
 
-DERP_BUILDTYPE := Official
-DERP_VERSION_APPEND_TIME_OF_DAY=true
-TARGET_NOT_USES_BLUR=true
-USE_LEGACY_BOOTANIMATION := true
-TARGET_USES_MINI_GAPPS := true
+# The Pixel Project flags
+TARGET_FACE_UNLOCK_SUPPORTED := true
+USE_PIXEL_CHARGER := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := false
+TARGET_SUPPORTS_QUICK_TAP  := true
+TARGET_SUPPORTS_NOW_PLAYING := true
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
