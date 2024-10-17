@@ -13,6 +13,7 @@ $(call inherit-product, device/xiaomi/vayu/device.mk)
 
 # Inherit some common The Pixel Project stuff.
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product-if-exists, vendor/certification/config.mk)
 
 PRODUCT_NAME := aosp_vayu
 PRODUCT_DEVICE := vayu

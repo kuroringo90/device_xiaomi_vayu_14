@@ -33,6 +33,9 @@ PRODUCT_TARGET_VNDK_VERSION := 30
 # Dynamic partitions setup
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Inherit from ViPER4AndroidFX
+$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
